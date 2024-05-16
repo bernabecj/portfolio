@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAG Project</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/x-icon" href="img/koala.png">
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>MAG Project Documentation</h1>
+        </header>
+
+        <ul>
+            <li><a href="#what_is_about" class="nav-link">What is about?</a></li>
+            <li><a href="#login" class="nav-link">Login</a></li>
+            <li><a href="#A" class="nav-link">Organization data</a></li>
+            <li><a href="#B" class="nav-link">Data location matrix</a> </li>
+            <li><a href="#F" class="nav-link">Details of the organization's partners</a></li>
+            <li><a href="#J" class="nav-link">Respondent data</a></li>
+            <li><a href="#L" class="nav-link">Observations</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+
+        <section id="what_is_about" class="main-section">
+            <header>
+                <h2>What is the project about?</h2>
+            </header>
+            <div>
+                <p>
+                    The MAG project (in Spanish, Ministerio de Agricultura y Ganadería). 
+                    The project is useful for farmers who need permits to carry out their functions, such as selling in the city.
+                </p>
+                <p>
+                    The web app is filled out by a MAG employee together with a farmer, 
+                    and in the end it generates a ticket for the farmer, which is necessary to carry out their activities.
+                </p>
+
+                <p>In order to create this page, we needed the following tools:</p>
+
+                <ol>
+                    <li>Angular</li>
+                    <li>TypeScript</li>
+                    <li>Java Spring</li>
+                    <li>Google Maps</li>
+                    <li>Microservices architecture</li>
+                    <li>Github</li>
+                </ol>
+
+                <p>
+                    The web application has the following most important modules (because there are a total of thirteen):
+                </p>
+                <ol type="A">
+                    <li>Login</li>
+                    <li>Organization data</li>
+                    <li>Data location matrix</li>
+                    <li>Details of the organization's partners</li>
+                    <li>Respondent data</li>
+                    <li>Observations</li>
+                </ol>
+            </div>
+
+
+        </section>
+
+        <section id="login" class="main-section">
+            <header>
+                <h2>The login page</h2>
+            </header>
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                        src="img/Login.jpg">
+
+                </p>
+
+                <p>On this page, the user has to log in with a <em>username</em> and <em>password</em> in order to continue.
+                <p>Best features:</p>
+
+                <ul>
+                    <li>When the user clicks the Log In button, it uses an <strong>API</strong> with a <strong>GET</strong> method</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="A" class="main-section">
+            <header>
+                <h2>Organization data</h2>
+            </header>
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                        src="img/A.jpg">
+
+                </p>
+
+                <p>This page is for data organization, where the user has to fill in <em>basic information</em>, such as <em>identification</em>, <em>business name</em>, <em>status</em>, etc.</p>
+
+                <p>Best features:</p>
+
+                <ul>
+                    <li>When the user clicks the Next (siguiente) button, it uses an <strong>API</strong> with a <strong>POST</strong> method</li>
+                    <li>If we fill in the identification and click the left green button (cargar datos), the rest of the data will be filled in automatically 
+                        with an <strong>API</strong> that uses a <strong>GET</strong> method
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+
+        <section id="B" class="main-section">
+            <header>
+                <h2>Data location matrix</h2>
+            </header>
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                    src="img/B.jpg">
+
+                </p>
+
+                <p>This is one of the most <em>interesting</em> tabs, 
+                    where the user will fill in the position of the organization and business by clicking on the <em>map</em>,
+                     and they can also use the items on the left side: <em>Province</em>, <em>Canton</em>, <em>Parish</em> 
+                     (Provincia, Cantón, Parroquia), etc.
+                </p>
+
+                <p>Best features:</p>
+
+                <ul>
+                    <li>It uses the <strong>Google Maps API</strong></li>
+                    <li>It uses both the <strong>GET</strong> and <strong>POST</strong> methods inside the <strong>APIs</strong></li>
+                    <li>It uses a <strong>service</strong> that has all the information for the dropdowns for Province, Canton, and Parish</li>
+                </ul>
+
+            </div>
+        </section>
+
+
+
+        <section id="F" class="main-section">
+            <header>
+                <h2>Details of the organization's partners</h2>
+            </header>
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                    src="img/F.jpg">
+
+                </p>
+
+                <p>This page is the same as the first, with the difference that here we can fill in some of the organization's partners.</p>
+
+                <p>Best features:</p>
+
+                <ul>
+                    <li>We use the complete <strong>CRUD</strong> here: Create, Read, Update and Delete</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section id="J" class="main-section">
+            <header>
+                <h2>Respondent data</h2>
+            </header>
+
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                    src="img/J.jpg">
+
+                </p>
+
+                <p>This page is an <em>agreement</em>, where the user has to agree or disagree with the terms.</p>
+
+                <p>Best features:</p>
+
+                <ul>
+                    <li>Here we have an PDF uploader</li>
+                    <li>The API method in this case is a POST</li>
+                </ul>
+
+            </div>
+
+
+        </section>
+
+        <section id="L" class="main-section">
+            <header>
+                <h2>Observations</h2>
+            </header>
+
+            <div>
+                <p class="image-container">
+                    <img alt="CSS p declaration color red"
+                    src="img/L.jpg">
+                </p>
+
+                <p>This is a very interesting page as well and it is the final one.</p>
+                <p>First, we fill in an observation, and when we click the finish (finalizar) button, it <strong>generates a PDF</strong> with the previous information.</p>
+
+            </div>
+
+
+        </section>
+        
+        <footer class="" style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+            <!-- Copyright -->
+            <div class="text-center p-3">
+                © 2022 From Scratch | Jaime Herrera:
+                <a class="" href="#" style="text-decoration: none;">frominside.net</a>
+            </div>
+        </footer>
+        <!-- December 27, 2022 
+        <br>
+        Linkedin: <a href="https://www.linkedin.com/in/jaime-bernabe-herrera/">Jaime Herrera</a> <p>FromScratch</p> -->
+
+    </main>
+
+</body>
+</html>
+
+

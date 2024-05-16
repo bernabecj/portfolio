@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inventario</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Solway|Sulphur+Point&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index-style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <div id="inventario">
+            <img src="imagenes/qbolon-logo.png" alt="Logo Q'Bolon">
+            <h1>INVENTARIO</h1>
+        </div>
+        <div id="opciones">
+            <div><a onclick="desplegarVentanaItem()"><b>+ &nbsp</b>Nuevo Item</a></div>
+        </div>
+    </div>
+
+
+    <section id="principal">
+        <div id="agregar">
+            <a onclick="desplegarVentanaAgregar()">
+                <img src="https://img.icons8.com/pastel-glyph/64/000000/plus.png" style="opacity: 0.8;">
+            </a>
+        </div>
+        <div id="divProductosImprimir"></div>
+    </section>
+
+    <div id="ventanaAgregar" class="ventanas">
+        <div id="tituloVentanaAgregar" class="titulosVentanas">
+            <h1>Agregar Producto</h1>
+        </div>
+        <div id="datosVentanaAgregar" class="datosVentanas">
+            <p>
+                <b>Producto:</b> <br>
+                <select id="dproducto"></select>
+            </p>
+            <p>
+                <b>Serie:</b> <br>
+                <input type="text" id="dserie"></input>
+            </p>
+            <p>
+                <b>Cantidad:</b> <br>
+                <input type="number" id="dcantidad" onchange="actualizarPrecioUnitario()">
+            </p>
+            <p>
+                <b>Costo Total:</b> <br>
+                <input type="number" id="dcostototal" onchange="actualizarPrecioUnitario()">
+            </p>
+            <p>
+                <b>Precio Unitario:</b>
+                <span id="dpreciounitario"></span>$
+            </p>
+            <p>
+                <b>Fecha de Caducidad:</b> <br>
+                <input type="date" id="dfechadecaducidad">
+            </p>
+            <p>
+                <input type="submit" value="Agregar" onclick="agregarProducto()">
+                <input type="submit" value="Cancelar" onclick="cerrarVentanaAgregar()">
+            </p>
+        </div>
+    </div>
+
+
+    <div id="ventanaDescripcion" class="ventanas">
+        <div id="tituloVentanaDescripcion" class="titulosVentanas">
+            <h1>Informacion del Producto</h1>
+        </div>
+        <div id="datosVentanaDescripcion" class="datosVentanas">
+            <p>
+                <b>Producto:</b> <br>
+                <span id="infoproducto"></span>
+            </p>
+            <p>
+                <b>Serie:</b> <br>
+                <span id="infoserie"></span>
+            </p>
+            <p>
+                <div style="float: left; margin-right: 2em;">
+                    <b>Cantidad:</b> <br>
+                    <span id="infocantidad"></span>
+                </div>
+                <div style="float: left; margin-bottom: 0.7em;">
+                    <b>Cantidad Actual:</b> <br>
+                    <input type="number" id="cantidadActual" onchange="mostrarGuardarCambios()">
+                </div>
+            </p>
+            <p style="clear: both;">
+                <b>Costo Total:</b> <br>
+                <span id="infocostototal"></span>
+            </p>
+            <p>
+                <b>Precio Unitario Aproximado:</b> <br>
+                <span id="infopreciounitario"></span>$
+            </p>
+            <p>
+                <b>Fecha de Caducidad:</b> <br>
+                <span id="infofechadecaducidad"></span>
+            </p>
+            <p>
+                <input type="submit" id="guardarCambios" value="Guardar Cambios">
+                <input type="submit" id="botonEliminar" value="Eliminar">
+                <input type="submit" value="Cancelar" onclick="cerrarVentanaDescripcion()">
+            </p>
+        </div>
+    </div>
+
+    <div id="ventanaItem" class="ventanas">
+        <div id="tituloVentanaItem" class="titulosVentanas">
+            <h1>Nuevo Producto</h1>
+        </div>
+        <div id="datosVentanaItem" class="datosVentanas">
+            <p>
+                <b>Nombre del nuevo producto:</b> <br>
+                <input type="text" id="item">
+            </p>
+            <p>
+                <b>URL de la imagen:</b> <br>
+                <input type="text" id="imgsrc">
+            </p>
+            <p>
+                <input type="submit" value="Ingresar" onclick="ingresarItem()">
+                <input type="submit" value="Cerrar" onclick="cerrarVentanaItem()">
+            </p>
+        </div>
+    </div>
+    <script src="inventario.js"></script>
+</body>
+
+</html>
